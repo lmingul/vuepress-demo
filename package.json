@@ -6,7 +6,7 @@
   "author": "lmingul <2217561701@qq.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
