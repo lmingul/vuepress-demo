@@ -2,15 +2,41 @@
  * @Author: lmingul
  * @Date: 2021-09-01 23:33:49
  * @LastEditors: lmingul
- * @LastEditTime: 2021-09-06 00:46:26
+ * @LastEditTime: 2021-09-12 23:02:02
  * @FilePath: \project-test\vuepress-demo\vuepress-demo\docs\.vuepress\config.js
  * @Description: 
  */
 
+ const description = "vuepress demo"
+ const title = "vuepress项目知识库"
+ const path = require("path")
+
+
+
  module.exports = {
-     title:"hello Vuepress",
-     description:"vuepress demo",
+     title:title,
+     description:description,
     //  theme: '@vuepress/vue',
+    // 修改webpack 的内部配置
+    configureWebpack : {
+        resolve:{
+            alias:{
+                "":""
+            }
+        }
+
+    },
+    // 提供多语言支持的语言配置
+    locales:{
+        "/":{
+            lang:"zh-CN",
+            title:"前端开发知识库",
+            description:"项目记录"
+        }
+    },
+
+
+
     head: [
         ['link', {
           rel: 'icon',
